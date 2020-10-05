@@ -8,29 +8,29 @@ public class Ln extends haxe.lang.HxObject
 {
 	static
 	{
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.AxisNone = 0;
-		//line 10 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.AxisX = 1;
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.AxisY = 2;
-		//line 12 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 12 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.AxisZ = 3;
-		//line 53 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 54 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.INF = 1e9;
-		//line 54 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 55 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.EPS = 1e-9;
-		//line 77 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 78 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.Intersection = 0;
-		//line 78 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 79 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.Difference = 1;
-		//line 123 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 124 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.ClipBox = new ln.Box(new ln.Vector(-1, -1, -1), new ln.Vector(1, 1, 1));
-		//line 126 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 127 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.Above = 0;
-		//line 127 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 128 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.Below = 1;
-		//line 132 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 133 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.NoHit = new ln.Hit(null, ln.Ln.INF);
 	}
 	
@@ -41,7 +41,7 @@ public class Ln extends haxe.lang.HxObject
 	
 	public Ln()
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Ln.__hx_ctor_ln_Ln(this);
 	}
 	
@@ -61,115 +61,115 @@ public class Ln extends haxe.lang.HxObject
 	
 	public static ln.Box BoxForShapes(haxe.root.Array<ln.Shape> shapes)
 	{
-		//line 15 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		if (( shapes.length == 0 )) 
 		{
-			//line 16 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 16 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			return new ln.Box(null, null);
 		}
 		
-		//line 18 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 18 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Box box = shapes.__get(0).BoundingBox();
-		//line 19 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 19 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<ln.Shape> _xxdzt = shapes;
-		//line 20 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		{
-			//line 20 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g = 0;
-			//line 20 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g1 = _xxdzt.length;
-			//line 20 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			while (( _g < _g1 ))
 			{
-				//line 20 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				int _1 = _g++;
-				//line 21 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 22 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				ln.Shape shape = _xxdzt.__get(_1);
-				//line 22 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 23 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				box = box.Extend(shape.BoundingBox());
 			}
 			
 		}
 		
-		//line 24 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 25 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return box;
 	}
 	
 	
 	public static ln.Box BoxForTriangles(haxe.root.Array<ln.Triangle> shapes)
 	{
-		//line 27 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 28 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		if (( shapes.length == 0 )) 
 		{
-			//line 28 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 29 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			return new ln.Box(null, null);
 		}
 		
-		//line 30 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 31 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Box box = shapes.__get(0).BoundingBox();
-		//line 31 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 32 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<ln.Triangle> _lywfo = shapes;
-		//line 32 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		{
-			//line 32 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g = 0;
-			//line 32 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g1 = _lywfo.length;
-			//line 32 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			while (( _g < _g1 ))
 			{
-				//line 32 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				int _1 = _g++;
-				//line 33 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 34 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				ln.Triangle shape = _lywfo.__get(_1);
-				//line 34 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 35 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				box = box.Extend(shape.BoundingBox());
 			}
 			
 		}
 		
-		//line 36 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 37 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return box;
 	}
 	
 	
 	public static ln.Box BoxForVectors(haxe.root.Array<ln.Vector> vectors)
 	{
-		//line 39 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 40 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		if (( vectors.length == 0 )) 
 		{
-			//line 40 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 41 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			return new ln.Box(null, null);
 		}
 		
-		//line 42 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector min = vectors.__get(0);
-		//line 43 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 44 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector max = vectors.__get(0);
-		//line 44 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 45 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<ln.Vector> _hblbg = vectors;
-		//line 45 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		{
-			//line 45 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g = 0;
-			//line 45 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g1 = _hblbg.length;
-			//line 45 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			while (( _g < _g1 ))
 			{
-				//line 45 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				int _1 = _g++;
-				//line 46 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 47 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				ln.Vector v = _hblbg.__get(_1);
-				//line 47 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 48 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				min = min.Min(v);
-				//line 48 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 49 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				max = max.Max(v);
 			}
 			
 		}
 		
-		//line 50 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 51 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Box(min, max);
 	}
 	
@@ -180,40 +180,40 @@ public class Ln extends haxe.lang.HxObject
 	
 	public static ln.Cone NewCone(double radius, double height)
 	{
-		//line 57 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 58 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Cone(radius, height);
 	}
 	
 	
 	public static ln.OutlineCone NewOutlineCone(ln.Vector eye, ln.Vector up, double radius, double height)
 	{
-		//line 61 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 62 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.OutlineCone(radius, height, eye, up);
 	}
 	
 	
 	public static ln.Shape NewTransformedOutlineCone(ln.Vector eye, ln.Vector up, ln.Vector v0, ln.Vector v1, double radius)
 	{
-		//line 64 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 65 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector d = v1.Sub(v0);
-		//line 65 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 66 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double z = d.Length();
-		//line 66 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 67 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double a = java.lang.Math.acos(d.Normalize().Dot(up));
-		//line 67 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 68 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Matrix m = ln.Ln.Translate(v0);
-		//line 68 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 69 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		if (( a != 0 )) 
 		{
-			//line 69 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 70 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			ln.Vector u = d.Cross(up).Normalize();
-			//line 70 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 71 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			m = ln.Ln.Rotate(u, a).Translate(v0);
 		}
 		
-		//line 72 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 73 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.OutlineCone c = ln.Ln.NewOutlineCone(m.Inverse().MulPosition(eye), up, radius, z);
-		//line 73 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 74 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ln.Ln.NewTransformedShape(c, m);
 	}
 	
@@ -224,90 +224,90 @@ public class Ln extends haxe.lang.HxObject
 	
 	public static ln.Shape NewBooleanShape(int op, haxe.root.Array<ln.Shape> shapes)
 	{
-		//line 80 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 81 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		if (( shapes.length == 0 )) 
 		{
-			//line 81 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 82 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			return new ln.EmptyShape();
 		}
 		
-		//line 83 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 84 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Shape shape = shapes.__get(0);
-		//line 84 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 85 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		int i = 1;
-		//line 85 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 86 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		while (( i < shapes.length ))
 		{
-			//line 86 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 87 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			shape = new ln.BooleanShape(op, shape, shapes.__get(i));
-			//line 87 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 88 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			 ++ i;
 		}
 		
-		//line 89 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 90 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return shape;
 	}
 	
 	
 	public static ln.Shape NewIntersection(haxe.root.Array<ln.Shape> shapes)
 	{
-		//line 92 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 93 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ln.Ln.NewBooleanShape(0, shapes);
 	}
 	
 	
 	public static ln.Shape NewDifference(haxe.root.Array<ln.Shape> shapes)
 	{
-		//line 95 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 96 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ln.Ln.NewBooleanShape(1, shapes);
 	}
 	
 	
 	public static ln.Cube NewCube(ln.Vector min, ln.Vector max)
 	{
-		//line 99 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 100 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Box box = new ln.Box(min, max);
-		//line 100 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 101 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Cube(min, max, box);
 	}
 	
 	
 	public static ln.Cylinder NewCylinder(double radius, double z0, double z1)
 	{
-		//line 104 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 105 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Cylinder(radius, z0, z1);
 	}
 	
 	
 	public static ln.OutlineCylinder NewOutlineCylinder(ln.Vector eye, ln.Vector up, double radius, double z0, double z1)
 	{
-		//line 108 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 109 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.OutlineCylinder(radius, z0, z1, eye, up);
 	}
 	
 	
 	public static ln.Shape NewTransformedOutlineCylinder(ln.Vector eye, ln.Vector up, ln.Vector v0, ln.Vector v1, double radius)
 	{
-		//line 111 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 112 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector d = v1.Sub(v0);
-		//line 112 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 113 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double z = d.Length();
-		//line 113 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 114 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double a = java.lang.Math.acos(d.Normalize().Dot(up));
-		//line 114 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 115 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Matrix m = ln.Ln.Translate(v0);
-		//line 115 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 116 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		if (( a != 0 )) 
 		{
-			//line 116 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 117 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			ln.Vector u = d.Cross(up).Normalize();
-			//line 117 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 118 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			m = ln.Ln.Rotate(u, a).Translate(v0);
 		}
 		
-		//line 119 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 120 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.OutlineCylinder c = ln.Ln.NewOutlineCylinder(m.Inverse().MulPosition(eye), up, radius, ((double) (0) ), z);
-		//line 120 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 121 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ln.Ln.NewTransformedShape(c, m);
 	}
 	
@@ -320,7 +320,7 @@ public class Ln extends haxe.lang.HxObject
 	
 	public static ln.Shape NewFunction(haxe.lang.Function _function, ln.Box box, int direction)
 	{
-		//line 129 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 130 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Function(_function, box, direction);
 	}
 	
@@ -329,280 +329,280 @@ public class Ln extends haxe.lang.HxObject
 	
 	public static ln.Matrix Identity()
 	{
-		//line 135 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 136 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Matrix(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 	}
 	
 	
 	public static ln.Matrix Translate(ln.Vector v)
 	{
-		//line 138 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 139 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Matrix(1, 0, 0, v.X, 0, 1, 0, v.Y, 0, 0, 1, v.Z, 0, 0, 0, 1);
 	}
 	
 	
 	public static ln.Matrix Scale(ln.Vector v)
 	{
-		//line 141 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 142 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Matrix(v.X, 0, 0, 0, 0, v.Y, 0, 0, 0, 0, v.Z, 0, 0, 0, 0, 1);
 	}
 	
 	
 	public static ln.Matrix Rotate(ln.Vector v, double a)
 	{
-		//line 144 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 145 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		v = v.Normalize();
-		//line 145 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 146 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double s = java.lang.Math.sin(a);
-		//line 146 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 147 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double c = java.lang.Math.cos(a);
-		//line 147 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 148 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double m = ( 1 - c );
-		//line 148 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 149 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Matrix(( ( ( m * v.X ) * v.X ) + c ), ( ( ( m * v.X ) * v.Y ) + ( v.Z * s ) ), ( ( ( m * v.Z ) * v.X ) - ( v.Y * s ) ), 0, ( ( ( m * v.X ) * v.Y ) - ( v.Z * s ) ), ( ( ( m * v.Y ) * v.Y ) + c ), ( ( ( m * v.Y ) * v.Z ) + ( v.X * s ) ), 0, ( ( ( m * v.Z ) * v.X ) + ( v.Y * s ) ), ( ( ( m * v.Y ) * v.Z ) - ( v.X * s ) ), ( ( ( m * v.Z ) * v.Z ) + c ), 0, 0, 0, 0, 1);
 	}
 	
 	
 	public static ln.Matrix Frustum(double l, double r, double b, double t, double n, double f)
 	{
-		//line 151 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 152 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double t1 = ( 2 * n );
-		//line 152 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 153 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double t2 = ( r - l );
-		//line 153 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 154 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double t3 = ( t - b );
-		//line 154 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 155 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double t4 = ( f - n );
-		//line 155 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 156 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Matrix(( t1 / t2 ), 0, ( (( r + l )) / t2 ), 0, 0, ( t1 / t3 ), ( (( t + b )) / t3 ), 0, 0, 0, ( ((  - (f)  - n )) / t4 ), ( (  - (t1)  * f ) / t4 ), 0, 0, -1, 0);
 	}
 	
 	
 	public static ln.Matrix Orthographic(double l, double r, double b, double t, double n, double f)
 	{
-		//line 158 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 159 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Matrix(( 2 / (( r - l )) ), 0, 0, (  - ((( r + l )))  / (( r - l )) ), 0, ( 2 / (( t - b )) ), 0, (  - ((( t + b )))  / (( t - b )) ), 0, 0, ( -2 / (( f - n )) ), (  - ((( f + n )))  / (( f - n )) ), 0, 0, 0, 1);
 	}
 	
 	
 	public static ln.Matrix Perspective(double fovy, double aspect, double near, double far)
 	{
-		//line 161 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 162 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double ymax = ( near * java.lang.Math.tan(( ( fovy * java.lang.Math.PI ) / 360 )) );
-		//line 162 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 163 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double xmax = ( ymax * aspect );
-		//line 163 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 164 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ln.Ln.Frustum( - (xmax) , xmax,  - (ymax) , ymax, near, far);
 	}
 	
 	
 	public static ln.Matrix LookAt(ln.Vector eye, ln.Vector center, ln.Vector up)
 	{
-		//line 166 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 167 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		up = up.Normalize();
-		//line 167 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 168 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector f = center.Sub(eye).Normalize();
-		//line 168 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 169 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector s = f.Cross(up).Normalize();
-		//line 169 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 170 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector u = s.Cross(f).Normalize();
-		//line 170 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 171 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Matrix m = new ln.Matrix(s.X, u.X,  - (f.X) , eye.X, s.Y, u.Y,  - (f.Y) , eye.Y, s.Z, u.Z,  - (f.Z) , eye.Z, 0, 0, 0, 1);
-		//line 171 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 172 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return m.Inverse();
 	}
 	
 	
 	public static ln.Mesh NewMesh(haxe.root.Array<ln.Triangle> triangles)
 	{
-		//line 175 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 176 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Box box = ln.Ln.BoxForTriangles(triangles);
-		//line 176 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 177 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Mesh(box, triangles, null);
 	}
 	
 	
 	public static int parseIndex(java.lang.String value, int length)
 	{
-		//line 184 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 185 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		java.lang.Object n = haxe.root.Std.parseInt(value);
-		//line 185 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 186 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		if (( ((int) (haxe.lang.Runtime.toInt(n)) ) < 0 )) 
 		{
-			//line 186 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 187 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			n = ((java.lang.Object) (haxe.lang.Runtime.plus(n, length)) );
 		}
 		
-		//line 188 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 189 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ((int) (haxe.lang.Runtime.toInt(n)) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.String> StringFields(java.lang.String line)
 	{
-		//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<java.lang.String> _this = haxe.lang.StringExt.split(line, " ");
-		//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.lang.Function f = ((haxe.lang.Function) (new haxe.lang.Closure(haxe.root.StringTools.class, "trim")) );
-		//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<java.lang.String> ret = ((haxe.root.Array<java.lang.String>) (((haxe.root.Array) (haxe.root.Array.alloc(((int) (_this.length) ))) )) );
-		//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		{
-			//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g = 0;
-			//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g1 = _this.length;
-			//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			while (( _g < _g1 ))
 			{
-				//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				int i = _g++;
-				//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				ret.__set(i, haxe.lang.Runtime.toString(f.__hx_invoke1_o(0.0, _this.__get(i))));
 			}
 			
 		}
 		
-		//line 191 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 192 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ret;
 	}
 	
 	
 	public static ln.Mesh LoadOBJ(java.lang.String objstr)
 	{
-		//line 194 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 195 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<ln.Vector> vs = new haxe.root.Array<ln.Vector>(new ln.Vector[]{});
-		//line 195 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 196 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<ln.Triangle> triangles = new haxe.root.Array<ln.Triangle>(new ln.Triangle[]{});
-		//line 196 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 197 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<java.lang.String> lines = haxe.lang.StringExt.split(objstr, "\n");
-		//line 197 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 198 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		{
-			//line 197 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 198 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g = 0;
-			//line 197 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 198 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			while (( _g < lines.length ))
 			{
-				//line 197 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 198 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				java.lang.String line = lines.__get(_g);
-				//line 197 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 198 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				 ++ _g;
-				//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.root.Array<java.lang.String> _this = haxe.lang.StringExt.split(line, " ");
-				//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.lang.Function f = ((haxe.lang.Function) (new haxe.lang.Closure(haxe.root.StringTools.class, "trim")) );
-				//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.root.Array<java.lang.String> ret = ((haxe.root.Array<java.lang.String>) (((haxe.root.Array) (haxe.root.Array.alloc(((int) (_this.length) ))) )) );
-				//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				{
-					//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					int _g1 = 0;
-					//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					int _g2 = _this.length;
-					//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					while (( _g1 < _g2 ))
 					{
-						//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+						//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 						int i = _g1++;
-						//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+						//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 						ret.__set(i, haxe.lang.Runtime.toString(f.__hx_invoke1_o(0.0, _this.__get(i))));
 					}
 					
 				}
 				
-				//line 198 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 199 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.root.Array<java.lang.String> fields = ret;
-				//line 199 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 200 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				if (( fields.length == 0 )) 
 				{
-					//line 200 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 201 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					continue;
 				}
 				
-				//line 202 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 203 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				java.lang.String keyword = fields.__get(0);
-				//line 203 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 204 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.root.Array<java.lang.String> args = fields.slice(1, null);
-				//line 204 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 205 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				{
-					//line 204 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 205 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					java.lang.String __temp_svar2 = (keyword);
-					//line 204 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 205 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					if (( __temp_svar2 != null )) 
 					{
-						//line 204 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+						//line 205 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 						switch (__temp_svar2.hashCode())
 						{
 							case 102:
 							{
-								//line 209 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+								//line 210 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 								if (__temp_svar2.equals("f")) 
 								{
-									//line 210 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+									//line 211 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 									haxe.root.Array<java.lang.Object> fvs = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{});
-									//line 211 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+									//line 212 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 									haxe.root.Array<java.lang.String> _wpaaa = args;
-									//line 212 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+									//line 213 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 									{
-										//line 212 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 213 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										int _g3 = 0;
-										//line 212 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 213 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										int _g4 = _wpaaa.length;
-										//line 212 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 213 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										while (( _g3 < _g4 ))
 										{
-											//line 212 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+											//line 213 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 											int i1 = _g3++;
-											//line 213 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+											//line 214 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 											java.lang.String arg = _wpaaa.__get(i1);
-											//line 214 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+											//line 215 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 											haxe.root.Array<java.lang.String> vertex = haxe.lang.StringExt.split((( arg + "//" )), "/");
-											//line 215 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+											//line 216 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 											int __temp_expr1 = ((int) (haxe.lang.Runtime.toInt(fvs.__set(i1, ln.Ln.parseIndex(vertex.__get(0), vs.length)))) );
 										}
 										
 									}
 									
-									//line 217 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+									//line 218 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 									int i2 = 1;
-									//line 218 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+									//line 219 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 									while (( i2 < ( fvs.length - 1 ) ))
 									{
-										//line 219 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 220 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										int i11 = 0;
-										//line 220 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 221 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										int i21 = i2;
-										//line 221 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 222 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										int i3 = ( i2 + 1 );
-										//line 222 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 223 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										ln.Triangle t = ln.Ln.NewTriangle(vs.__get(((int) (haxe.lang.Runtime.toInt(fvs.__get(i11))) )), vs.__get(((int) (haxe.lang.Runtime.toInt(fvs.__get(i21))) )), vs.__get(((int) (haxe.lang.Runtime.toInt(fvs.__get(i3))) )));
-										//line 223 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 224 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										triangles = triangles.concat(new haxe.root.Array<ln.Triangle>(new ln.Triangle[]{t}));
-										//line 224 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+										//line 225 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 										 ++ i2;
 									}
 									
 								}
 								
-								//line 209 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+								//line 210 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 								break;
 							}
 							
 							
 							case 118:
 							{
-								//line 205 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+								//line 206 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 								if (__temp_svar2.equals("v")) 
 								{
-									//line 206 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+									//line 207 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 									haxe.root.Array<java.lang.Object> f1 = ln.Ln.ParseFloats(args);
-									//line 207 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+									//line 208 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 									ln.Vector v = new ln.Vector(((double) (haxe.lang.Runtime.toDouble(f1.__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(f1.__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(f1.__get(2))) ));
-									//line 208 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+									//line 209 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 									vs = vs.concat(new haxe.root.Array<ln.Vector>(new ln.Vector[]{v}));
 								}
 								
-								//line 205 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+								//line 206 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 								break;
 							}
 							
@@ -617,107 +617,113 @@ public class Ln extends haxe.lang.HxObject
 			
 		}
 		
-		//line 228 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 229 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ln.Ln.NewMesh(triangles);
 	}
 	
 	
 	public static ln.Shape NewTransformedShape(ln.Shape s, ln.Matrix m)
 	{
-		//line 241 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 242 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.TransformedShape(s, m, m.Inverse());
 	}
 	
 	
 	public static ln.Sphere NewSphere(ln.Vector center, double radius)
 	{
-		//line 247 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 248 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector min = new ln.Vector(( center.X - radius ), ( center.Y - radius ), ( center.Z - radius ));
-		//line 248 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 249 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Vector max = new ln.Vector(( center.X + radius ), ( center.Y + radius ), ( center.Z + radius ));
-		//line 249 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 250 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Box box = new ln.Box(min, max);
-		//line 250 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 251 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Sphere(center, radius, box);
 	}
 	
 	
 	public static ln.Vector LatLngToXYZ(double lat, double lng, double radius)
 	{
-		//line 253 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 254 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		lat = ln.Ln.Radians(lat);
-		//line 254 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 255 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		lng = ln.Ln.Radians(lng);
-		//line 255 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 256 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double x = ( ( radius * java.lang.Math.cos(lat) ) * java.lang.Math.cos(lng) );
-		//line 256 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 257 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double y = ( ( radius * java.lang.Math.cos(lat) ) * java.lang.Math.sin(lng) );
-		//line 257 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 258 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		double z = ( radius * java.lang.Math.sin(lat) );
-		//line 258 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 259 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Vector(x, y, z);
 	}
 	
 	
 	public static ln.OutlineSphere NewOutlineSphere(ln.Vector eye, ln.Vector up, ln.Vector center, double radius)
 	{
-		//line 262 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
-		return new ln.OutlineSphere(center, radius, null, eye, up);
+		//line 264 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
+		ln.Vector min = new ln.Vector(( center.X - radius ), ( center.Y - radius ), ( center.Z - radius ));
+		//line 265 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
+		ln.Vector max = new ln.Vector(( center.X + radius ), ( center.Y + radius ), ( center.Z + radius ));
+		//line 266 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
+		ln.Box box = new ln.Box(min, max);
+		//line 267 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
+		return new ln.OutlineSphere(center, radius, box, eye, up);
 	}
 	
 	
 	public static ln.Mesh LoadSTL(java.lang.String stlstr)
 	{
-		//line 272 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
-		haxe.Log.trace.__hx_invoke2_o(0.0, "Loading STL (ASCII)", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Ln", "ln/Ln.hx", "LoadSTL"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (272) )) )}));
-		//line 274 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 277 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, "Loading STL (ASCII)", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Ln", "ln/Ln.hx", "LoadSTL"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (277) )) )}));
+		//line 279 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<ln.Vector> vertexes = new haxe.root.Array<ln.Vector>(new ln.Vector[]{});
-		//line 275 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 280 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<java.lang.String> lines = haxe.lang.StringExt.split(stlstr, "\n");
-		//line 276 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 281 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		{
-			//line 276 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 281 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g = 0;
-			//line 276 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 281 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			while (( _g < lines.length ))
 			{
-				//line 276 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 281 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				java.lang.String line = lines.__get(_g);
-				//line 276 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 281 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				 ++ _g;
-				//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.root.Array<java.lang.String> _this = haxe.lang.StringExt.split(line, " ");
-				//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.lang.Function f = ((haxe.lang.Function) (new haxe.lang.Closure(haxe.root.StringTools.class, "trim")) );
-				//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.root.Array<java.lang.String> ret = ((haxe.root.Array<java.lang.String>) (((haxe.root.Array) (haxe.root.Array.alloc(((int) (_this.length) ))) )) );
-				//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				{
-					//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					int _g1 = 0;
-					//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					int _g2 = _this.length;
-					//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					while (( _g1 < _g2 ))
 					{
-						//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+						//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 						int i = _g1++;
-						//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+						//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 						ret.__set(i, haxe.lang.Runtime.toString(f.__hx_invoke1_o(0.0, _this.__get(i))));
 					}
 					
 				}
 				
-				//line 277 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 282 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				haxe.root.Array<java.lang.String> fields = ret;
-				//line 278 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 283 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				if (( ( fields.length == 4 ) && haxe.lang.Runtime.valEq(fields.__get(0), "vertex") )) 
 				{
-					//line 279 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 284 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					haxe.root.Array<java.lang.Object> f1 = ln.Ln.ParseFloats(fields.slice(1, null));
-					//line 280 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 285 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					ln.Vector v = new ln.Vector(((double) (haxe.lang.Runtime.toDouble(f1.__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(f1.__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(f1.__get(2))) ));
-					//line 281 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+					//line 286 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 					vertexes = vertexes.concat(new haxe.root.Array<ln.Vector>(new ln.Vector[]{v}));
 				}
 				
@@ -725,110 +731,110 @@ public class Ln extends haxe.lang.HxObject
 			
 		}
 		
-		//line 284 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 289 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<ln.Triangle> triangles = new haxe.root.Array<ln.Triangle>(new ln.Triangle[]{});
-		//line 285 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 290 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		int i1 = 0;
-		//line 286 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 291 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		while (( i1 < vertexes.length ))
 		{
-			//line 287 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 292 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			ln.Triangle t = new ln.Triangle(null, null, null, null);
-			//line 288 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 293 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			t.V1 = vertexes.__get(i1);
-			//line 289 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 294 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			t.V2 = vertexes.__get(( i1 + 1 ));
-			//line 290 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 295 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			t.V3 = vertexes.__get(( i1 + 2 ));
-			//line 291 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 296 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			t.UpdateBoundingBox();
-			//line 292 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 297 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			triangles = triangles.concat(new haxe.root.Array<ln.Triangle>(new ln.Triangle[]{t}));
-			//line 293 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 298 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			i1 += 3;
 		}
 		
-		//line 296 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 301 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ln.Ln.NewMesh(triangles);
 	}
 	
 	
 	public static ln.Tree NewTree(haxe.root.Array<ln.Shape> shapes)
 	{
-		//line 302 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 308 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Box box = ln.Ln.BoxForShapes(shapes);
-		//line 303 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 310 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Node node = ln.Ln.NewNode(shapes);
-		//line 304 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 311 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		node.Split(0);
-		//line 305 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 312 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Tree(box, node);
 	}
 	
 	
 	public static ln.Node NewNode(haxe.root.Array<ln.Shape> shapes)
 	{
-		//line 308 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 315 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return new ln.Node(0, 0, shapes, null, null);
 	}
 	
 	
 	public static ln.Triangle NewTriangle(ln.Vector v1, ln.Vector v2, ln.Vector v3)
 	{
-		//line 312 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 319 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		ln.Triangle t = new ln.Triangle(null, null, null, null);
-		//line 313 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 320 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		t.V1 = v1;
-		//line 314 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 321 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		t.V2 = v2;
-		//line 315 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 322 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		t.V3 = v3;
-		//line 316 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 323 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		t.UpdateBoundingBox();
-		//line 317 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 324 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return t;
 	}
 	
 	
 	public static double Radians(double degrees)
 	{
-		//line 323 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 330 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ( ( degrees * java.lang.Math.PI ) / 180 );
 	}
 	
 	
 	public static double Degrees(double radians)
 	{
-		//line 326 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 333 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return ( ( radians * 180 ) / java.lang.Math.PI );
 	}
 	
 	
 	public static double Median(haxe.root.Array<java.lang.Object> items)
 	{
-		//line 329 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 336 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		int n = items.length;
-		//line 330 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 337 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		if (( n == 0 )) 
 		{
-			//line 331 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 338 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			return ((double) (0) );
 		}
 		else
 		{
-			//line 333 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 340 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			if (( ( n % 2 ) == 1 )) 
 			{
-				//line 334 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 341 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				return ((double) (haxe.lang.Runtime.toDouble(items.__get(((int) (( ((double) (n) ) / 2 )) )))) );
 			}
 			else
 			{
-				//line 337 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 344 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				double a = ((double) (haxe.lang.Runtime.toDouble(items.__get(((int) (( ( ((double) (n) ) / 2 ) - 1 )) )))) );
-				//line 338 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 345 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				double b = ((double) (haxe.lang.Runtime.toDouble(items.__get(((int) (( ((double) (n) ) / 2 )) )))) );
-				//line 339 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 346 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				return ( (( a + b )) / 2 );
 			}
 			
@@ -839,53 +845,53 @@ public class Ln extends haxe.lang.HxObject
 	
 	public static haxe.root.Array<java.lang.Object> ParseFloats(haxe.root.Array<java.lang.String> items)
 	{
-		//line 343 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 350 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<java.lang.Object> result = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{});
-		//line 344 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 351 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		haxe.root.Array<java.lang.String> _bbwdk = items;
-		//line 345 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 352 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		{
-			//line 345 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 352 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g = 0;
-			//line 345 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 352 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			int _g1 = _bbwdk.length;
-			//line 345 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 352 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			while (( _g < _g1 ))
 			{
-				//line 345 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 352 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				int i = _g++;
-				//line 346 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 353 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				java.lang.String item = _bbwdk.__get(i);
-				//line 347 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 354 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				double __temp_expr1 = ((double) (haxe.lang.Runtime.toDouble(result.__set(i, haxe.root.Std.parseFloat(item)))) );
 			}
 			
 		}
 		
-		//line 349 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 356 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		return result;
 	}
 	
 	
 	public static ln.Vector RandomUnitVector()
 	{
-		//line 355 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+		//line 362 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 		while (true)
 		{
-			//line 356 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 363 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			double x = ( ( java.lang.Math.random() * 2 ) - 1 );
-			//line 357 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 364 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			double y = ( ( java.lang.Math.random() * 2 ) - 1 );
-			//line 358 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 365 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			double z = ( ( java.lang.Math.random() * 2 ) - 1 );
-			//line 359 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 366 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			if (( ( ( ( x * x ) + ( y * y ) ) + ( z * z ) ) > 1 )) 
 			{
-				//line 360 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+				//line 367 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 				continue;
 			}
 			
-			//line 362 "/Users/lingdonghuang/proj/go2json/ln/Ln.hx"
+			//line 369 "/Users/lingdonghuang/proj/LN.pde/ln/Ln.hx"
 			return new ln.Vector(x, y, z).Normalize();
 		}
 		

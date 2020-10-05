@@ -18,8 +18,8 @@ class Tree {
     var _gwfin : Array<Dynamic> = tree.Box.Intersect(r);
     var tmin = _gwfin[0];
     var tmax = _gwfin[1];
-    if (tmax<tmin||tmax<0){
-      return NoHit;
+    if (tmax<tmin || tmax<0){
+      // return NoHit;
     }
     return tree.Root.Intersect(r,tmin,tmax);
   }

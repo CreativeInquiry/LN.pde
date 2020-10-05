@@ -63,9 +63,9 @@ abstract Path (Array<Vector>){
     var _sbbcu = p;
     for (_ in 0..._sbbcu.length){
       var v = _sbbcu[_];
-      var _ymuir : Array<Dynamic> = f.Filter(v);
-      var v = _ymuir[0];
-      var ok = _ymuir[1];
+      var _ymuir = f.Filter(v);
+      var v = _ymuir.x;
+      var ok = _ymuir.y;
       if (ok){
         path = path.concat(new Path([v]));
       }

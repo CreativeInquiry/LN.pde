@@ -1,4 +1,6 @@
 package ln;
+import haxe.xml.Access;
+import ln.Filter.FilterResult;
 import ln.Ln.*;
 import ln.Ln.Op;
 import ln.Ln.Direction;
@@ -16,19 +18,16 @@ class ClipFilter implements Filter{
   public function _clone (){
     return new ClipFilter(this.Matrix,this.Eye,this.Scene);
   }
-  public function Filter(v:Vector) : Array<Dynamic> {
-    var f = this._clone();
+  public function Filter(v:Vector) : FilterResult {
+    var f = this;//._clone();
     var w = f.Matrix.MulPositionW(v);
     if (!f.Scene.Visible(f.Eye,v)){
-      var _ehdge : Array<Dynamic> = [w,false];
-      return _ehdge;
+      return new FilterResult(w,false);
     }
     if (!ClipBox.Contains(w)){
-      var _qywho : Array<Dynamic> = [w,false];
-      return _qywho;
+      return new FilterResult(w,false);
     }
-    var _wvzuj : Array<Dynamic> = [w,true];
-    return _wvzuj;
+    return new FilterResult(w,true);
   }
 
 }

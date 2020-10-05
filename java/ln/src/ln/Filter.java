@@ -6,7 +6,7 @@ import haxe.root.*;
 @SuppressWarnings(value={"rawtypes", "unchecked"})
 public interface Filter extends haxe.lang.IHxObject
 {
-	haxe.root.Array Filter(ln.Vector v);
+	ln.FilterResult Filter(ln.Vector v);
 	
 }
 

@@ -13,26 +13,26 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 	
 	public Cone(java.lang.Object _Radius, java.lang.Object _Height)
 	{
-		//line 10 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		ln.Cone.__hx_ctor_ln_Cone(this, _Radius, _Height);
 	}
 	
 	
 	protected static void __hx_ctor_ln_Cone(ln.Cone __hx_this, java.lang.Object _Radius, java.lang.Object _Height)
 	{
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		__hx_this.Height = 0.0;
-		//line 8 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		__hx_this.Radius = 0.0;
-		//line 10 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		{
-			//line 10 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			double _Height1 = ( (haxe.lang.Runtime.eq(_Height, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Height)) )) );
-			//line 10 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			double _Radius1 = ( (haxe.lang.Runtime.eq(_Radius, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Radius)) )) );
-			//line 11 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			__hx_this.Radius = _Radius1;
-			//line 12 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 12 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			__hx_this.Height = _Height1;
 		}
 		
@@ -45,191 +45,191 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 	
 	public ln.Cone _clone()
 	{
-		//line 15 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		return new ln.Cone(this.Radius, this.Height);
 	}
 	
 	
 	public void Compile()
 	{
-		//line 18 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 18 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		ln.Cone c = this._clone();
 	}
 	
 	
 	public ln.Box BoundingBox()
 	{
-		//line 21 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 21 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		ln.Cone c = this._clone();
-		//line 22 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 22 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double r = c.Radius;
-		//line 23 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 23 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		return new ln.Box(new ln.Vector( - (r) ,  - (r) , 0), new ln.Vector(r, r, c.Height));
 	}
 	
 	
 	public boolean Contains(ln.Vector v, double f)
 	{
-		//line 26 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 26 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		ln.Cone c = this._clone();
-		//line 27 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 27 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		return false;
 	}
 	
 	
 	public ln.Hit Intersect(ln.Ray ray)
 	{
-		//line 30 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 30 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		ln.Cone shape = this._clone();
-		//line 31 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 31 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		ln.Vector o = ray.Origin;
-		//line 32 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 32 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		ln.Vector d = ray.Direction;
-		//line 33 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double r = shape.Radius;
-		//line 34 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 34 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double h = shape.Height;
-		//line 35 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 35 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double k = ( r / h );
-		//line 36 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 36 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		k *= k;
-		//line 37 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 37 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double a = ( ( ( d.X * d.X ) + ( d.Y * d.Y ) ) - ( ( k * d.Z ) * d.Z ) );
-		//line 38 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 38 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double b = ( 2 * (( ( ( d.X * o.X ) + ( d.Y * o.Y ) ) - ( ( k * d.Z ) * (( o.Z - h )) ) )) );
-		//line 39 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 39 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double c = ( ( ( o.X * o.X ) + ( o.Y * o.Y ) ) - ( ( k * (( o.Z - h )) ) * (( o.Z - h )) ) );
-		//line 40 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 40 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double q = ( ( b * b ) - ( ( 4 * a ) * c ) );
-		//line 41 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 41 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		if (( q <= 0 )) 
 		{
-			//line 42 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 42 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			return ln.Ln.NoHit;
 		}
 		
-		//line 44 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 44 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double s = java.lang.Math.sqrt(q);
-		//line 45 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 45 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double t0 = ( ((  - (b)  + s )) / (( 2 * a )) );
-		//line 46 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		double t1 = ( ((  - (b)  - s )) / (( 2 * a )) );
-		//line 47 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 47 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		if (( t0 > t1 )) 
 		{
-			//line 48 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 48 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			double _gswzg = t0;
-			//line 49 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 49 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			double _qixnd = t1;
-			//line 50 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 50 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			t1 = _gswzg;
-			//line 51 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 51 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			t0 = _qixnd;
 		}
 		
-		//line 53 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 53 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		if (( t0 > 1e-6 )) 
 		{
-			//line 54 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 54 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			ln.Vector p = ray.Position(t0);
-			//line 55 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 55 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (( ( p.Z > 0 ) && ( p.Z < h ) )) 
 			{
-				//line 56 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 56 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				return new ln.Hit(shape, t0);
 			}
 			
 		}
 		
-		//line 59 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 59 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		if (( t1 > 1e-6 )) 
 		{
-			//line 60 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 60 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			ln.Vector p1 = ray.Position(t1);
-			//line 61 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 61 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (( ( p1.Z > 0 ) && ( p1.Z < h ) )) 
 			{
-				//line 62 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 62 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				return new ln.Hit(shape, t1);
 			}
 			
 		}
 		
-		//line 65 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 65 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		return ln.Ln.NoHit;
 	}
 	
 	
 	public haxe.root.Array<haxe.root.Array<ln.Vector>> Paths()
 	{
-		//line 68 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 68 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		ln.Cone c = this._clone();
-		//line 69 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 69 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		haxe.root.Array<haxe.root.Array<ln.Vector>> result = ln._Paths.Paths_Impl_._new(new haxe.root.Array<haxe.root.Array<ln.Vector>>(new haxe.root.Array[]{}));
-		//line 70 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 70 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		int a = 0;
-		//line 71 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 71 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		while (( a < 360 ))
 		{
-			//line 72 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 72 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			double x = ( c.Radius * java.lang.Math.cos(ln.Ln.Radians(((double) (a) ))) );
-			//line 73 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 73 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			double y = ( c.Radius * java.lang.Math.sin(ln.Ln.Radians(((double) (a) ))) );
-			//line 74 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 74 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			result = ln._Paths.Paths_Impl_.concat(result, ln._Paths.Paths_Impl_._new(new haxe.root.Array<haxe.root.Array<ln.Vector>>(new haxe.root.Array[]{ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{new ln.Vector(x, y, 0), new ln.Vector(0, 0, c.Height)}))})));
-			//line 75 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 75 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			a += 30;
 		}
 		
-		//line 77 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 77 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		return result;
 	}
 	
 	
 	@Override public double __hx_setField_f(java.lang.String field, double value, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				switch (field.hashCode())
 				{
 					case -2137162425:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Height")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							this.Height = ((double) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1854711630:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Radius")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							this.Radius = ((double) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
@@ -238,15 +238,15 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				return super.__hx_setField_f(field, value, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				throw null;
 			}
 			
@@ -257,48 +257,48 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public java.lang.Object __hx_setField(java.lang.String field, java.lang.Object value, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				switch (field.hashCode())
 				{
 					case -2137162425:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Height")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							this.Height = ((double) (haxe.lang.Runtime.toDouble(value)) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1854711630:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Radius")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							this.Radius = ((double) (haxe.lang.Runtime.toDouble(value)) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
@@ -307,15 +307,15 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				return super.__hx_setField(field, value, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				throw null;
 			}
 			
@@ -326,140 +326,140 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				switch (field.hashCode())
 				{
 					case 76886222:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Paths")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1854711630:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Radius")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this.Radius;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Intersect")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -2137162425:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Height")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this.Height;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -502801857:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Contains")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Contains")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "_clone")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case 405804391:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("BoundingBox")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "BoundingBox")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Compile")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
@@ -468,15 +468,15 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				throw null;
 			}
 			
@@ -487,44 +487,44 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public double __hx_getField_f(java.lang.String field, boolean throwErrors, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				switch (field.hashCode())
 				{
 					case -2137162425:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Height")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this.Height;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1854711630:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Radius")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this.Radius;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
@@ -533,15 +533,15 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				return super.__hx_getField_f(field, throwErrors, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				throw null;
 			}
 			
@@ -552,108 +552,108 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, java.lang.Object[] dynargs)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				switch (field.hashCode())
 				{
 					case 76886222:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this.Paths();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this._clone();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this.Intersect(((ln.Ray) (dynargs[0]) ));
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							this.Compile();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case -502801857:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("Contains")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this.Contains(((ln.Vector) (dynargs[0]) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[1])) ));
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
 					
 					case 405804391:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						if (field.equals("BoundingBox")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 							return this.BoundingBox();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 						break;
 					}
 					
@@ -662,27 +662,27 @@ public class Cone extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		return null;
 	}
 	
 	
 	@Override public void __hx_getFields(haxe.root.Array<java.lang.String> baseArr)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		baseArr.push("Height");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		baseArr.push("Radius");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cone.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cone.hx"
 		super.__hx_getFields(baseArr);
 	}
 	

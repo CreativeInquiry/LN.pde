@@ -13,7 +13,7 @@ public class EmptyShape extends haxe.lang.HxObject implements ln.Shape
 	
 	public EmptyShape()
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 		ln.EmptyShape.__hx_ctor_ln_EmptyShape(this);
 	}
 	
@@ -25,7 +25,7 @@ public class EmptyShape extends haxe.lang.HxObject implements ln.Shape
 	
 	public ln.EmptyShape _clone()
 	{
-		//line 10 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+		//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 		return new ln.EmptyShape();
 	}
 	
@@ -37,136 +37,136 @@ public class EmptyShape extends haxe.lang.HxObject implements ln.Shape
 	
 	public ln.Box BoundingBox()
 	{
-		//line 15 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+		//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 		return new ln.Box(new ln.Vector(null, null, null), new ln.Vector(null, null, null));
 	}
 	
 	
 	public boolean Contains(ln.Vector v, double f)
 	{
-		//line 18 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+		//line 18 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 		return false;
 	}
 	
 	
 	public ln.Hit Intersect(ln.Ray r)
 	{
-		//line 21 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+		//line 21 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 		return ln.Ln.NoHit;
 	}
 	
 	
 	public haxe.root.Array<haxe.root.Array<ln.Vector>> Paths()
 	{
-		//line 24 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
-		return null;
+		//line 24 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
+		return ln._Paths.Paths_Impl_._new(new haxe.root.Array<haxe.root.Array<ln.Vector>>(new haxe.root.Array[]{}));
 	}
 	
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 				switch (field.hashCode())
 				{
 					case 76886222:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Paths")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "_clone")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Intersect")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Compile")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case -502801857:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("Contains")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Contains")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case 405804391:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("BoundingBox")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "BoundingBox")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
@@ -175,15 +175,15 @@ public class EmptyShape extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 				throw null;
 			}
 			
@@ -194,108 +194,108 @@ public class EmptyShape extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, java.lang.Object[] dynargs)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 				switch (field.hashCode())
 				{
 					case 76886222:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return this.Paths();
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return this._clone();
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return this.Intersect(((ln.Ray) (dynargs[0]) ));
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							this.Compile();
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case -502801857:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("Contains")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return this.Contains(((ln.Vector) (dynargs[0]) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[1])) ));
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
 					
 					case 405804391:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						if (field.equals("BoundingBox")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 							return this.BoundingBox();
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 						break;
 					}
 					
@@ -304,16 +304,16 @@ public class EmptyShape extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/EmptyShape.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/EmptyShape.hx"
 		return null;
 	}
 	

@@ -13,32 +13,32 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 	
 	public Cylinder(java.lang.Object _Radius, java.lang.Object _Z0, java.lang.Object _Z1)
 	{
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Cylinder.__hx_ctor_ln_Cylinder(this, _Radius, _Z0, _Z1);
 	}
 	
 	
 	protected static void __hx_ctor_ln_Cylinder(ln.Cylinder __hx_this, java.lang.Object _Radius, java.lang.Object _Z0, java.lang.Object _Z1)
 	{
-		//line 10 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		__hx_this.Z1 = 0.0;
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		__hx_this.Z0 = 0.0;
-		//line 8 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		__hx_this.Radius = 0.0;
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		{
-			//line 11 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			double _Z11 = ( (haxe.lang.Runtime.eq(_Z1, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Z1)) )) );
-			//line 11 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			double _Z01 = ( (haxe.lang.Runtime.eq(_Z0, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Z0)) )) );
-			//line 11 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			double _Radius1 = ( (haxe.lang.Runtime.eq(_Radius, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Radius)) )) );
-			//line 12 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 12 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			__hx_this.Radius = _Radius1;
-			//line 13 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 13 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			__hx_this.Z0 = _Z01;
-			//line 14 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 14 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			__hx_this.Z1 = _Z11;
 		}
 		
@@ -53,51 +53,51 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 	
 	public ln.Cylinder _clone()
 	{
-		//line 17 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 17 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		return new ln.Cylinder(this.Radius, this.Z0, this.Z1);
 	}
 	
 	
 	public void Compile()
 	{
-		//line 20 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Cylinder c = this._clone();
 	}
 	
 	
 	public ln.Box BoundingBox()
 	{
-		//line 23 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 23 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Cylinder c = this._clone();
-		//line 24 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 24 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double r = c.Radius;
-		//line 25 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 25 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		return new ln.Box(new ln.Vector( - (r) ,  - (r) , c.Z0), new ln.Vector(r, r, c.Z1));
 	}
 	
 	
 	public boolean Contains(ln.Vector v, double f)
 	{
-		//line 28 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 28 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Cylinder c = this._clone();
-		//line 29 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 29 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Vector xy = new ln.Vector(v.X, v.Y, 0);
-		//line 30 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 30 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		if (( xy.Length() > ( c.Radius + f ) )) 
 		{
-			//line 31 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 31 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			return false;
 		}
 		
-		//line 33 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		if (( v.Z >= ( c.Z0 - f ) )) 
 		{
-			//line 33 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			return ( v.Z <= ( c.Z1 + f ) );
 		}
 		else
 		{
-			//line 33 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			return false;
 		}
 		
@@ -106,159 +106,159 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 	
 	public ln.Hit Intersect(ln.Ray ray)
 	{
-		//line 36 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 36 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Cylinder shape = this._clone();
-		//line 37 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 37 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double r = shape.Radius;
-		//line 38 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 38 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Vector o = ray.Origin;
-		//line 39 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 39 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Vector d = ray.Direction;
-		//line 40 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 40 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double a = ( ( d.X * d.X ) + ( d.Y * d.Y ) );
-		//line 41 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 41 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double b = ( ( ( 2 * o.X ) * d.X ) + ( ( 2 * o.Y ) * d.Y ) );
-		//line 42 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 42 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double c = ( ( ( o.X * o.X ) + ( o.Y * o.Y ) ) - ( r * r ) );
-		//line 43 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double q = ( ( b * b ) - ( ( 4 * a ) * c ) );
-		//line 44 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 44 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		if (( q < 0 )) 
 		{
-			//line 45 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 45 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			return ln.Ln.NoHit;
 		}
 		
-		//line 47 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 47 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double s = java.lang.Math.sqrt(q);
-		//line 48 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 48 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double t0 = ( ((  - (b)  + s )) / (( 2 * a )) );
-		//line 49 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 49 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double t1 = ( ((  - (b)  - s )) / (( 2 * a )) );
-		//line 50 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 50 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		if (( t0 > t1 )) 
 		{
-			//line 51 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 51 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			double _qppxt = t0;
-			//line 52 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 52 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			double _tuiak = t1;
-			//line 53 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 53 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			t1 = _qppxt;
-			//line 54 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 54 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			t0 = _tuiak;
 		}
 		
-		//line 56 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 56 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double z0 = ( o.Z + ( t0 * d.Z ) );
-		//line 57 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 57 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		double z1 = ( o.Z + ( t1 * d.Z ) );
-		//line 58 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 58 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		if (( ( ( t0 > 1e-6 ) && ( shape.Z0 < z0 ) ) && ( z0 < shape.Z1 ) )) 
 		{
-			//line 59 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 59 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			return new ln.Hit(shape, t0);
 		}
 		
-		//line 61 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 61 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		if (( ( ( t1 > 1e-6 ) && ( shape.Z0 < z1 ) ) && ( z1 < shape.Z1 ) )) 
 		{
-			//line 62 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 62 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			return new ln.Hit(shape, t1);
 		}
 		
-		//line 64 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 64 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		return ln.Ln.NoHit;
 	}
 	
 	
 	public haxe.root.Array<haxe.root.Array<ln.Vector>> Paths()
 	{
-		//line 67 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 67 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		ln.Cylinder c = this._clone();
-		//line 68 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 68 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		haxe.root.Array<haxe.root.Array<ln.Vector>> result = ln._Paths.Paths_Impl_._new(new haxe.root.Array<haxe.root.Array<ln.Vector>>(new haxe.root.Array[]{}));
-		//line 69 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 69 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		int a = 0;
-		//line 70 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 70 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		while (( a < 360 ))
 		{
-			//line 71 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 71 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			double x = ( c.Radius * java.lang.Math.cos(ln.Ln.Radians(((double) (a) ))) );
-			//line 72 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 72 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			double y = ( c.Radius * java.lang.Math.sin(ln.Ln.Radians(((double) (a) ))) );
-			//line 73 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 73 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			result = ln._Paths.Paths_Impl_.concat(result, ln._Paths.Paths_Impl_._new(new haxe.root.Array<haxe.root.Array<ln.Vector>>(new haxe.root.Array[]{ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{new ln.Vector(x, y, c.Z0), new ln.Vector(x, y, c.Z1)}))})));
-			//line 74 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 74 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			a += 10;
 		}
 		
-		//line 76 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 76 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		return result;
 	}
 	
 	
 	@Override public double __hx_setField_f(java.lang.String field, double value, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				switch (field.hashCode())
 				{
 					case 2839:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Z1")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							this.Z1 = ((double) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1854711630:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Radius")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							this.Radius = ((double) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case 2838:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Z0")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							this.Z0 = ((double) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
@@ -267,15 +267,15 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				return super.__hx_setField_f(field, value, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				throw null;
 			}
 			
@@ -286,66 +286,66 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public java.lang.Object __hx_setField(java.lang.String field, java.lang.Object value, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				switch (field.hashCode())
 				{
 					case 2839:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Z1")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							this.Z1 = ((double) (haxe.lang.Runtime.toDouble(value)) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1854711630:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Radius")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							this.Radius = ((double) (haxe.lang.Runtime.toDouble(value)) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case 2838:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Z0")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							this.Z0 = ((double) (haxe.lang.Runtime.toDouble(value)) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
@@ -354,15 +354,15 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				return super.__hx_setField(field, value, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				throw null;
 			}
 			
@@ -373,156 +373,156 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				switch (field.hashCode())
 				{
 					case 76886222:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Paths")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1854711630:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Radius")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Radius;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Intersect")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case 2838:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Z0")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Z0;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -502801857:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Contains")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Contains")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case 2839:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Z1")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Z1;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case 405804391:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("BoundingBox")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "BoundingBox")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "_clone")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Compile")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
@@ -531,15 +531,15 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				throw null;
 			}
 			
@@ -550,60 +550,60 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public double __hx_getField_f(java.lang.String field, boolean throwErrors, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				switch (field.hashCode())
 				{
 					case 2839:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Z1")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Z1;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1854711630:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Radius")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Radius;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case 2838:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Z0")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Z0;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
@@ -612,15 +612,15 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				return super.__hx_getField_f(field, throwErrors, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				throw null;
 			}
 			
@@ -631,108 +631,108 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, java.lang.Object[] dynargs)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				switch (field.hashCode())
 				{
 					case 76886222:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Paths();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this._clone();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Intersect(((ln.Ray) (dynargs[0]) ));
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							this.Compile();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case -502801857:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("Contains")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.Contains(((ln.Vector) (dynargs[0]) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[1])) ));
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
 					
 					case 405804391:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						if (field.equals("BoundingBox")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 							return this.BoundingBox();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 						break;
 					}
 					
@@ -741,29 +741,29 @@ public class Cylinder extends haxe.lang.HxObject implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		return null;
 	}
 	
 	
 	@Override public void __hx_getFields(haxe.root.Array<java.lang.String> baseArr)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		baseArr.push("Z1");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		baseArr.push("Z0");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		baseArr.push("Radius");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Cylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Cylinder.hx"
 		super.__hx_getFields(baseArr);
 	}
 	

@@ -13,24 +13,24 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 	
 	public BooleanShape(java.lang.Object _Op, ln.Shape _A, ln.Shape _B)
 	{
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 12 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.BooleanShape.__hx_ctor_ln_BooleanShape(this, _Op, _A, _B);
 	}
 	
 	
 	protected static void __hx_ctor_ln_BooleanShape(ln.BooleanShape __hx_this, java.lang.Object _Op, ln.Shape _A, ln.Shape _B)
 	{
-		//line 10 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		__hx_this.B = null;
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		__hx_this.A = null;
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 12 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		{
-			//line 12 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 13 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			__hx_this.Op = ((int) (haxe.lang.Runtime.toInt(_Op)) );
-			//line 13 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 14 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			__hx_this.A = _A;
-			//line 14 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			__hx_this.B = _B;
 		}
 		
@@ -45,51 +45,51 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 	
 	public ln.BooleanShape _clone()
 	{
-		//line 17 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 18 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		return new ln.BooleanShape(this.Op, this.A, this.B);
 	}
 	
 	
 	public void Compile()
 	{
-		//line 20 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 21 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.BooleanShape s = this._clone();
 	}
 	
 	
 	public ln.Box BoundingBox()
 	{
-		//line 23 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 24 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.BooleanShape s = this._clone();
-		//line 24 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 25 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.Box a = s.A.BoundingBox();
-		//line 25 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 26 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.Box b = s.B.BoundingBox();
-		//line 26 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 27 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		return a.Extend(b);
 	}
 	
 	
 	public boolean Contains(ln.Vector v, double f)
 	{
-		//line 29 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 30 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.BooleanShape s = this._clone();
-		//line 30 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 31 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		f = 1e-3;
-		//line 31 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 32 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		switch (s.Op)
 		{
 			case 0:
 			{
-				//line 33 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 34 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				if (s.A.Contains(v, f)) 
 				{
-					//line 33 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+					//line 34 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 					return s.B.Contains(v, f);
 				}
 				else
 				{
-					//line 33 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+					//line 34 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 					return false;
 				}
 				
@@ -98,15 +98,15 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 			
 			case 1:
 			{
-				//line 35 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 36 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				if (s.A.Contains(v, f)) 
 				{
-					//line 35 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+					//line 36 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 					return  ! (s.B.Contains(v,  - (f) )) ;
 				}
 				else
 				{
-					//line 35 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+					//line 36 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 					return false;
 				}
 				
@@ -115,85 +115,83 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 			
 		}
 		
-		//line 37 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 38 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		return false;
 	}
 	
 	
 	public ln.Hit Intersect(ln.Ray r)
 	{
-		//line 40 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 41 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.BooleanShape s = this._clone();
-		//line 41 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 42 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.Hit h1 = s.A.Intersect(r);
-		//line 42 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.Hit h2 = s.B.Intersect(r);
-		//line 43 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 44 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.Hit h = h1.Min(h2);
-		//line 44 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 45 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.Vector v = r.Position(h.T);
-		//line 45 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		if ((  ! (h.Ok())  || s.Contains(v, ((double) (0) )) )) 
 		{
-			//line 46 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 47 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			return h;
 		}
 		
-		//line 48 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 49 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		return s.Intersect(new ln.Ray(r.Position(( h.T + 0.01 )), r.Direction));
 	}
 	
 	
 	public haxe.root.Array<haxe.root.Array<ln.Vector>> Paths()
 	{
-		//line 51 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 52 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		ln.BooleanShape s = this._clone();
-		//line 52 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 53 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		haxe.root.Array<haxe.root.Array<ln.Vector>> p = s.A.Paths();
-		//line 53 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 54 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		p = ln._Paths.Paths_Impl_.concat(p, s.B.Paths());
-		//line 54 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 55 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		return ln._Paths.Paths_Impl_.Filter(ln._Paths.Paths_Impl_.Chop(p, 0.01), s);
 	}
 	
 	
-	public haxe.root.Array Filter(ln.Vector v)
+	public ln.FilterResult Filter(ln.Vector v)
 	{
-		//line 57 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
-		ln.BooleanShape s = this._clone();
-		//line 58 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
-		haxe.root.Array _pmkdy = new haxe.root.Array(new java.lang.Object[]{v, s.Contains(v, ((double) (0) ))});
-		//line 59 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
-		return _pmkdy;
+		//line 58 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
+		ln.BooleanShape s = this;
+		//line 59 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
+		return new ln.FilterResult(v, s.Contains(v, ((double) (0) )));
 	}
 	
 	
 	@Override public double __hx_setField_f(java.lang.String field, double value, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				switch (field.hashCode())
 				{
 					case 2561:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Op")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							this.Op = ((int) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
@@ -202,15 +200,15 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				return super.__hx_setField_f(field, value, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				throw null;
 			}
 			
@@ -221,66 +219,66 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 	
 	@Override public java.lang.Object __hx_setField(java.lang.String field, java.lang.Object value, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				switch (field.hashCode())
 				{
 					case 66:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("B")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							this.B = ((ln.Shape) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 2561:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Op")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							this.Op = ((int) (haxe.lang.Runtime.toInt(value)) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 65:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("A")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							this.A = ((ln.Shape) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
@@ -289,15 +287,15 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				return super.__hx_setField(field, value, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				throw null;
 			}
 			
@@ -308,172 +306,172 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				switch (field.hashCode())
 				{
 					case 2104342424:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Filter")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Filter")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 2561:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Op")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this.Op;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 76886222:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Paths")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 65:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("A")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this.A;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Intersect")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 66:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("B")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this.B;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case -502801857:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Contains")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Contains")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "_clone")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 405804391:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("BoundingBox")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "BoundingBox")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Compile")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
@@ -482,15 +480,15 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				throw null;
 			}
 			
@@ -501,28 +499,28 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 	
 	@Override public double __hx_getField_f(java.lang.String field, boolean throwErrors, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				switch (field.hashCode())
 				{
 					case 2561:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Op")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return ((double) (this.Op) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
@@ -531,15 +529,15 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				return super.__hx_getField_f(field, throwErrors, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				throw null;
 			}
 			
@@ -550,124 +548,124 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, java.lang.Object[] dynargs)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				switch (field.hashCode())
 				{
 					case 2104342424:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Filter")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this.Filter(((ln.Vector) (dynargs[0]) ));
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this._clone();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 76886222:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this.Paths();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							this.Compile();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this.Intersect(((ln.Ray) (dynargs[0]) ));
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case 405804391:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("BoundingBox")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this.BoundingBox();
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
 					
 					case -502801857:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						if (field.equals("Contains")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+							//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 							return this.Contains(((ln.Vector) (dynargs[0]) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[1])) ));
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+						//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 						break;
 					}
 					
@@ -676,29 +674,29 @@ public class BooleanShape extends haxe.lang.HxObject implements ln.Filter, ln.Sh
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+			//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+				//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		return null;
 	}
 	
 	
 	@Override public void __hx_getFields(haxe.root.Array<java.lang.String> baseArr)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		baseArr.push("B");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		baseArr.push("A");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		baseArr.push("Op");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/BooleanShape.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/BooleanShape.hx"
 		super.__hx_getFields(baseArr);
 	}
 	

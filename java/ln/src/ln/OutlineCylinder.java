@@ -8,39 +8,39 @@ public class OutlineCylinder extends ln.Cylinder implements ln.Shape
 {
 	public OutlineCylinder(haxe.lang.EmptyObject empty)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		super(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public OutlineCylinder(java.lang.Object _Radius, java.lang.Object _Z0, java.lang.Object _Z1, ln.Vector _Eye, ln.Vector _Up)
 	{
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		super(haxe.lang.EmptyObject.EMPTY);
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.OutlineCylinder.__hx_ctor_ln_OutlineCylinder(this, _Radius, _Z0, _Z1, _Eye, _Up);
 	}
 	
 	
 	protected static void __hx_ctor_ln_OutlineCylinder(ln.OutlineCylinder __hx_this, java.lang.Object _Radius, java.lang.Object _Z0, java.lang.Object _Z1, ln.Vector _Eye, ln.Vector _Up)
 	{
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		__hx_this.Up = null;
-		//line 8 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		__hx_this.Eye = null;
-		//line 10 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		{
-			//line 10 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			double _Z11 = ( (haxe.lang.Runtime.eq(_Z1, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Z1)) )) );
-			//line 10 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			double _Z01 = ( (haxe.lang.Runtime.eq(_Z0, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Z0)) )) );
-			//line 10 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			double _Radius1 = ( (haxe.lang.Runtime.eq(_Radius, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Radius)) )) );
-			//line 11 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			ln.Cylinder.__hx_ctor_ln_Cylinder(__hx_this, _Radius1, _Z01, _Z11);
-			//line 12 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 12 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			__hx_this.Eye = _Eye;
-			//line 13 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 13 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			__hx_this.Up = _Up;
 		}
 		
@@ -53,129 +53,129 @@ public class OutlineCylinder extends ln.Cylinder implements ln.Shape
 	
 	@Override public ln.Cylinder _clone()
 	{
-		//line 16 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 16 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		return new ln.OutlineCylinder(this.Radius, this.Z0, this.Z1, this.Eye, this.Up);
 	}
 	
 	
 	@Override public haxe.root.Array<haxe.root.Array<ln.Vector>> Paths()
 	{
-		//line 19 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 19 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.OutlineCylinder c = ((ln.OutlineCylinder) (this._clone()) );
-		//line 20 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector center = new ln.Vector(0, 0, c.Z0);
-		//line 21 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 21 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		double hyp = center.Sub(c.Eye).Length();
-		//line 22 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 22 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		double opp = c.Radius;
-		//line 23 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 23 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		double theta = java.lang.Math.asin(( opp / hyp ));
-		//line 24 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 24 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		double adj = ( opp / java.lang.Math.tan(theta) );
-		//line 25 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 25 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		double d = ( java.lang.Math.cos(theta) * adj );
-		//line 26 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 26 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector w = center.Sub(c.Eye).Normalize();
-		//line 27 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 27 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector u = w.Cross(c.Up).Normalize();
-		//line 28 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 28 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector c0 = c.Eye.Add(w.MulScalar(d));
-		//line 29 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 29 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector a0 = c0.Add(u.MulScalar(( c.Radius * 1.01 )));
-		//line 30 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 30 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector b0 = c0.Add(u.MulScalar((  - (c.Radius)  * 1.01 )));
-		//line 31 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 31 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		center = new ln.Vector(0, 0, c.Z1);
-		//line 32 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 32 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		hyp = center.Sub(c.Eye).Length();
-		//line 33 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		opp = c.Radius;
-		//line 34 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 34 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		theta = java.lang.Math.asin(( opp / hyp ));
-		//line 35 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 35 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		adj = ( opp / java.lang.Math.tan(theta) );
-		//line 36 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 36 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		d = ( java.lang.Math.cos(theta) * adj );
-		//line 37 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 37 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		w = center.Sub(c.Eye).Normalize();
-		//line 38 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 38 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		u = w.Cross(c.Up).Normalize();
-		//line 39 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 39 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector c1 = c.Eye.Add(w.MulScalar(d));
-		//line 40 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 40 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector a1 = c1.Add(u.MulScalar(( c.Radius * 1.01 )));
-		//line 41 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 41 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		ln.Vector b1 = c1.Add(u.MulScalar((  - (c.Radius)  * 1.01 )));
-		//line 42 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 42 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		haxe.root.Array<ln.Vector> p0 = ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{}));
-		//line 43 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		haxe.root.Array<ln.Vector> p1 = ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{}));
-		//line 44 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 44 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		int a = 0;
-		//line 45 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 45 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		while (( a < 360 ))
 		{
-			//line 46 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			double x = ( c.Radius * java.lang.Math.cos(ln.Ln.Radians(((double) (a) ))) );
-			//line 47 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 47 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			double y = ( c.Radius * java.lang.Math.sin(ln.Ln.Radians(((double) (a) ))) );
-			//line 48 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 48 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			p0 = ln._Path.Path_Impl_.concat(p0, ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{new ln.Vector(x, y, c.Z0)})));
-			//line 49 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 49 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			p1 = ln._Path.Path_Impl_.concat(p1, ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{new ln.Vector(x, y, c.Z1)})));
-			//line 50 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 50 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			 ++ a;
 		}
 		
-		//line 52 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 52 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		return ln._Paths.Paths_Impl_._new(new haxe.root.Array<haxe.root.Array<ln.Vector>>(new haxe.root.Array[]{p0, p1, ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{new ln.Vector(a0.X, a0.Y, c.Z0), new ln.Vector(a1.X, a1.Y, c.Z1)})), ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{new ln.Vector(b0.X, b0.Y, c.Z0), new ln.Vector(b1.X, b1.Y, c.Z1)}))}));
 	}
 	
 	
 	@Override public java.lang.Object __hx_setField(java.lang.String field, java.lang.Object value, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 				switch (field.hashCode())
 				{
 					case 2747:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						if (field.equals("Up")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							this.Up = ((ln.Vector) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						break;
 					}
 					
 					
 					case 70161:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						if (field.equals("Eye")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							this.Eye = ((ln.Vector) (value) );
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							return value;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						break;
 					}
 					
@@ -184,15 +184,15 @@ public class OutlineCylinder extends ln.Cylinder implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 				return super.__hx_setField(field, value, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 				throw null;
 			}
 			
@@ -203,76 +203,76 @@ public class OutlineCylinder extends ln.Cylinder implements ln.Shape
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		{
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			boolean __temp_executeDef1 = true;
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			if (( field != null )) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 				switch (field.hashCode())
 				{
 					case 76886222:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Paths")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						break;
 					}
 					
 					
 					case 70161:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						if (field.equals("Eye")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							return this.Eye;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "_clone")) );
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						break;
 					}
 					
 					
 					case 2747:
 					{
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						if (field.equals("Up")) 
 						{
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							__temp_executeDef1 = false;
-							//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+							//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 							return this.Up;
 						}
 						
-						//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+						//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 						break;
 					}
 					
@@ -281,15 +281,15 @@ public class OutlineCylinder extends ln.Cylinder implements ln.Shape
 				
 			}
 			
-			//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+			//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+				//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 				throw null;
 			}
 			
@@ -300,11 +300,11 @@ public class OutlineCylinder extends ln.Cylinder implements ln.Shape
 	
 	@Override public void __hx_getFields(haxe.root.Array<java.lang.String> baseArr)
 	{
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		baseArr.push("Up");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		baseArr.push("Eye");
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/OutlineCylinder.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineCylinder.hx"
 		super.__hx_getFields(baseArr);
 	}
 	

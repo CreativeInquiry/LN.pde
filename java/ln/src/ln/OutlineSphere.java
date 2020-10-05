@@ -8,35 +8,35 @@ public class OutlineSphere extends ln.Sphere implements ln.Shape
 {
 	public OutlineSphere(haxe.lang.EmptyObject empty)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		super(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public OutlineSphere(ln.Vector _Center, java.lang.Object _Radius, ln.Box _Box, ln.Vector _Eye, ln.Vector _Up)
 	{
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		super(haxe.lang.EmptyObject.EMPTY);
-		//line 11 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		ln.OutlineSphere.__hx_ctor_ln_OutlineSphere(this, _Center, _Radius, _Box, _Eye, _Up);
 	}
 	
 	
 	protected static void __hx_ctor_ln_OutlineSphere(ln.OutlineSphere __hx_this, ln.Vector _Center, java.lang.Object _Radius, ln.Box _Box, ln.Vector _Eye, ln.Vector _Up)
 	{
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		__hx_this.Up = null;
-		//line 8 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		__hx_this.Eye = null;
-		//line 10 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		{
-			//line 10 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			double _Radius1 = ( (haxe.lang.Runtime.eq(_Radius, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(_Radius)) )) );
-			//line 11 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			ln.Sphere.__hx_ctor_ln_Sphere(__hx_this, _Center, _Radius1, _Box);
-			//line 12 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 12 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			__hx_this.Eye = _Eye;
-			//line 13 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 13 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			__hx_this.Up = _Up;
 		}
 		
@@ -49,109 +49,109 @@ public class OutlineSphere extends ln.Sphere implements ln.Shape
 	
 	@Override public ln.Sphere _clone()
 	{
-		//line 16 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 16 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		return new ln.OutlineSphere(this.Center, this.Radius, this.Box, this.Eye, this.Up);
 	}
 	
 	
 	@Override public haxe.root.Array<haxe.root.Array<ln.Vector>> Paths()
 	{
-		//line 19 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 19 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		ln.OutlineSphere s = this;
-		//line 20 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		haxe.root.Array<ln.Vector> path = ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{}));
-		//line 21 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 21 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		ln.Vector center = s.Center;
-		//line 22 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 22 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		double radius = s.Radius;
-		//line 23 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 23 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		double hyp = center.Sub(s.Eye).Length();
-		//line 24 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 24 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		double opp = radius;
-		//line 25 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 25 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		double theta = java.lang.Math.asin(( opp / hyp ));
-		//line 26 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 26 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		double adj = ( opp / java.lang.Math.tan(theta) );
-		//line 27 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 27 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		double d = ( java.lang.Math.cos(theta) * adj );
-		//line 28 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 28 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		double r = ( java.lang.Math.sin(theta) * adj );
-		//line 29 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 29 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		ln.Vector w = center.Sub(s.Eye).Normalize();
-		//line 30 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 30 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		ln.Vector u = w.Cross(s.Up).Normalize();
-		//line 31 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 31 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		ln.Vector v = w.Cross(u).Normalize();
-		//line 32 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 32 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		ln.Vector c = s.Eye.Add(w.MulScalar(d));
-		//line 33 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		int i = 0;
-		//line 34 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 34 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		while (( i <= 360 ))
 		{
-			//line 35 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 35 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			double a = ln.Ln.Radians(((double) (i) ));
-			//line 36 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 36 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			ln.Vector p = c;
-			//line 37 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 37 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			p = p.Add(u.MulScalar(( java.lang.Math.cos(a) * r )));
-			//line 38 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 38 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			p = p.Add(v.MulScalar(( java.lang.Math.sin(a) * r )));
-			//line 39 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 39 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			path = ln._Path.Path_Impl_.concat(path, ln._Path.Path_Impl_._new(new haxe.root.Array<ln.Vector>(new ln.Vector[]{p})));
-			//line 40 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 40 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			 ++ i;
 		}
 		
-		//line 42 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 42 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		return ln._Paths.Paths_Impl_._new(new haxe.root.Array<haxe.root.Array<ln.Vector>>(new haxe.root.Array[]{path}));
 	}
 	
 	
 	@Override public java.lang.Object __hx_setField(java.lang.String field, java.lang.Object value, boolean handleProperties)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 				switch (field.hashCode())
 				{
 					case 2747:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						if (field.equals("Up")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							this.Up = ((ln.Vector) (value) );
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							return value;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						break;
 					}
 					
 					
 					case 70161:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						if (field.equals("Eye")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							this.Eye = ((ln.Vector) (value) );
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							return value;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						break;
 					}
 					
@@ -160,15 +160,15 @@ public class OutlineSphere extends ln.Sphere implements ln.Shape
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 				return super.__hx_setField(field, value, handleProperties);
 			}
 			else
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 				throw null;
 			}
 			
@@ -179,76 +179,76 @@ public class OutlineSphere extends ln.Sphere implements ln.Shape
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 				switch (field.hashCode())
 				{
 					case 76886222:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Paths")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						break;
 					}
 					
 					
 					case 70161:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						if (field.equals("Eye")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							return this.Eye;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "_clone")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						break;
 					}
 					
 					
 					case 2747:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						if (field.equals("Up")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 							return this.Up;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 						break;
 					}
 					
@@ -257,15 +257,15 @@ public class OutlineSphere extends ln.Sphere implements ln.Shape
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 				throw null;
 			}
 			
@@ -276,11 +276,11 @@ public class OutlineSphere extends ln.Sphere implements ln.Shape
 	
 	@Override public void __hx_getFields(haxe.root.Array<java.lang.String> baseArr)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		baseArr.push("Up");
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		baseArr.push("Eye");
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/OutlineSphere.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/OutlineSphere.hx"
 		super.__hx_getFields(baseArr);
 	}
 	

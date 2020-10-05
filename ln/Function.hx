@@ -47,7 +47,7 @@ class Function implements Shape{
   }
   public function Paths3() : Paths {
     var f = this._clone();
-    var path:Path = null;
+    var path:Path = new Path([]);
     var n = 10000;
     var i = 0;
     while (i<n){
@@ -64,12 +64,14 @@ class Function implements Shape{
     return new Paths([path]);
   }
   public function Paths() : Paths {
+
     var f = this._clone();
-    var paths:Paths = null;
+    var paths:Paths = new Paths([]);
     var fine = 1.0/256;
     var a = 0;
     while (a<360){
-      var path:Path = null;
+      
+      var path:Path = new Path([]);
       var r = 0.0;
       while (r<=8.0){
         var x = Math.cos(Radians((cast a)))*r;
@@ -90,12 +92,12 @@ class Function implements Shape{
   }
   public function Paths1() : Paths {
     var f = this._clone();
-    var paths:Paths = null;
+    var paths:Paths = new Paths([]);
     var step = 1.0/8;
     var fine = 1.0/64;
     var x = f.Box.Min.X;
     while (x<=f.Box.Max.X){
-      var path:Path = null;
+      var path:Path = new Path([]);
       var y = f.Box.Min.Y;
       while (y<=f.Box.Max.Y){
         var z = f.Function(x,y);
@@ -109,7 +111,7 @@ class Function implements Shape{
     }
     var y = f.Box.Min.Y;
     while (y<=f.Box.Max.Y){
-      var path:Path = null;
+      var path:Path = new Path([]);
       var x = f.Box.Min.X;
       while (x<=f.Box.Max.X){
         var z = f.Function(x,y);

@@ -13,22 +13,22 @@ public class Tree extends haxe.lang.HxObject
 	
 	public Tree(ln.Box _Box, ln.Node _Root)
 	{
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		ln.Tree.__hx_ctor_ln_Tree(this, _Box, _Root);
 	}
 	
 	
 	protected static void __hx_ctor_ln_Tree(ln.Tree __hx_this, ln.Box _Box, ln.Node _Root)
 	{
-		//line 8 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		__hx_this.Root = null;
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		__hx_this.Box = null;
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		{
-			//line 10 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 10 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			__hx_this.Box = _Box;
-			//line 11 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 11 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			__hx_this.Root = _Root;
 		}
 		
@@ -41,77 +41,72 @@ public class Tree extends haxe.lang.HxObject
 	
 	public ln.Tree _clone()
 	{
-		//line 14 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 14 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		return new ln.Tree(this.Box, this.Root);
 	}
 	
 	
 	public ln.Hit Intersect(ln.Ray r)
 	{
-		//line 17 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 17 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		ln.Tree tree = this;
-		//line 18 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 18 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		haxe.root.Array _gwfin = tree.Box.Intersect(r);
-		//line 19 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 19 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		int tmin = ((int) (haxe.lang.Runtime.toInt(_gwfin.__get(0))) );
-		//line 20 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		int tmax = ((int) (haxe.lang.Runtime.toInt(_gwfin.__get(1))) );
-		//line 21 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
-		if (( ( tmax < tmin ) || ( tmax < 0 ) )) 
-		{
-			//line 22 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
-			return ln.Ln.NoHit;
-		}
-		
-		//line 24 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 21 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
+		boolean tmp = ( ( tmax < tmin ) || ( tmax < 0 ) );
+		//line 24 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		return tree.Root.Intersect(r, ((double) (tmin) ), ((double) (tmax) ));
 	}
 	
 	
 	@Override public java.lang.Object __hx_setField(java.lang.String field, java.lang.Object value, boolean handleProperties)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				switch (field.hashCode())
 				{
 					case 2553090:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						if (field.equals("Root")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							this.Root = ((ln.Node) (value) );
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							return value;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						break;
 					}
 					
 					
 					case 66987:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						if (field.equals("Box")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							this.Box = ((ln.Box) (value) );
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							return value;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						break;
 					}
 					
@@ -120,15 +115,15 @@ public class Tree extends haxe.lang.HxObject
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				return super.__hx_setField(field, value, handleProperties);
 			}
 			else
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				throw null;
 			}
 			
@@ -139,76 +134,76 @@ public class Tree extends haxe.lang.HxObject
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				switch (field.hashCode())
 				{
 					case -1787984641:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Intersect")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						break;
 					}
 					
 					
 					case 66987:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						if (field.equals("Box")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							return this.Box;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "_clone")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						break;
 					}
 					
 					
 					case 2553090:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						if (field.equals("Root")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							return this.Root;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						break;
 					}
 					
@@ -217,15 +212,15 @@ public class Tree extends haxe.lang.HxObject
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				throw null;
 			}
 			
@@ -236,44 +231,44 @@ public class Tree extends haxe.lang.HxObject
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, java.lang.Object[] dynargs)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				switch (field.hashCode())
 				{
 					case -1787984641:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							return this.Intersect(((ln.Ray) (dynargs[0]) ));
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						break;
 					}
 					
 					
 					case -1480441762:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						if (field.equals("_clone")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 							return this._clone();
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 						break;
 					}
 					
@@ -282,15 +277,15 @@ public class Tree extends haxe.lang.HxObject
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			else
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 				throw null;
 			}
 			
@@ -301,11 +296,11 @@ public class Tree extends haxe.lang.HxObject
 	
 	@Override public void __hx_getFields(haxe.root.Array<java.lang.String> baseArr)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		baseArr.push("Root");
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		baseArr.push("Box");
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Tree.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Tree.hx"
 		super.__hx_getFields(baseArr);
 	}
 	

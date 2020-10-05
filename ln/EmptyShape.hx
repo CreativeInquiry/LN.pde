@@ -21,7 +21,7 @@ class EmptyShape implements Shape{
     return NoHit;
   }
   public function Paths() : Paths {
-    return null;
+    return new Paths([]);
   }
 
 }

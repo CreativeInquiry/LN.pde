@@ -18,6 +18,7 @@ class Ln{
     var box = shapes[0].BoundingBox();
     var _xxdzt = shapes;
     for (_ in 0..._xxdzt.length){
+      
       var shape = _xxdzt[_];
       box = box.Extend(shape.BoundingBox());
     }
@@ -259,7 +260,11 @@ class Ln{
   }
   public static function NewOutlineSphere(eye:Vector, up:Vector, center:Vector, radius:Float) : OutlineSphere {
     // var sphere = NewSphere(center,radius);
-    return /*&*/new OutlineSphere(center,radius,eye,up);
+    // return /*&*/new OutlineSphere(center,radius,eye,up);
+    var min = new Vector(center.X-radius,center.Y-radius,center.Z-radius);
+    var max = new Vector(center.X+radius,center.Y+radius,center.Z+radius);
+    var box = new Box(min,max);
+    return /*&*/new OutlineSphere(center,radius,box,eye,up);
   }
   //package ln;
   //import bufio;
@@ -299,7 +304,9 @@ class Ln{
   //import math;
   //import sort;
   public static function NewTree(shapes:Array<Shape>) : Tree {
+    
     var box = BoxForShapes(shapes);
+    
     var node = NewNode(shapes);
     node.Split(0);
     return /*&*/new Tree(box,node);

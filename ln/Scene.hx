@@ -41,6 +41,7 @@ class Scene {
     var result:Paths = new Paths([]);
     var _rddsn = s.Shapes;
     for (_ in 0..._rddsn.length){
+      
       var shape = _rddsn[_];
       result = result.concat(shape.Paths());
     }
@@ -55,18 +56,24 @@ class Scene {
   }
   public function RenderWithMatrix(matrix:Matrix, eye:Vector, width:Float, height:Float, step:Float) : Paths {
     var s = this;
+    trace("render step 0/6");
     s.Compile();
+    trace("render step 1/6");
     var paths = s.Paths();
+    trace("render step 2/6");
     if (step>0){
       paths = paths.Chop(step);
     }
+    trace("render step 3/6");
     paths = paths.Filter(/*&*/new ClipFilter(matrix,eye,s));
+    trace("render step 4/6");
     if (step>0){
       paths = paths.Simplify(1e-6);
     }
-
+    trace("render step 5/6");
     matrix = Translate(new Vector(1,1,0)).Scale(new Vector(width/2,height/2,0));
     paths = paths.Transform(matrix);
+    trace("render step 6/6");
     return paths;
   }
 

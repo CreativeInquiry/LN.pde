@@ -1,4 +1,5 @@
 package ln;
+import ln.Filter.FilterResult;
 import ln.Ln.*;
 import ln.Ln.Op;
 import ln.Ln.Direction;
@@ -53,10 +54,10 @@ class BooleanShape implements Shape implements Filter{
     p = p.concat(s.B.Paths());
     return p.Chop(0.01).Filter(s);
   }
-  public function Filter(v:Vector) : Array<Dynamic> {
-    var s = this._clone();
-    var _pmkdy : Array<Dynamic> = [v,s.Contains(v,0)];
-    return _pmkdy;
+  public function Filter(v:Vector) : FilterResult {
+    var s = this;
+    return new FilterResult(v,s.Contains(v,0));
+    
   }
 
 }

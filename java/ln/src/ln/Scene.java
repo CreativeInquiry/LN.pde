@@ -13,18 +13,18 @@ public class Scene extends haxe.lang.HxObject
 	
 	public Scene()
 	{
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Scene.__hx_ctor_ln_Scene(this);
 	}
 	
 	
 	protected static void __hx_ctor_ln_Scene(ln.Scene __hx_this)
 	{
-		//line 8 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 8 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		__hx_this.Tree = null;
-		//line 7 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 7 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		__hx_this.Shapes = new haxe.root.Array<ln.Shape>(new ln.Shape[]{});
-		//line 9 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 9 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		{
 		}
 		
@@ -37,33 +37,33 @@ public class Scene extends haxe.lang.HxObject
 	
 	public void Compile()
 	{
-		//line 13 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 13 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Scene s = this;
-		//line 14 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 14 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		haxe.root.Array<ln.Shape> _fjilh = s.Shapes;
-		//line 15 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		{
-			//line 15 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			int _g = 0;
-			//line 15 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			int _g1 = _fjilh.length;
-			//line 15 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			while (( _g < _g1 ))
 			{
-				//line 15 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 15 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				int _1 = _g++;
-				//line 16 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 16 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				ln.Shape shape = _fjilh.__get(_1);
-				//line 17 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 17 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				shape.Compile();
 			}
 			
 		}
 		
-		//line 19 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 19 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		if (( s.Tree == null )) 
 		{
-			//line 20 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 20 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			s.Tree = ln.Ln.NewTree(s.Shapes);
 		}
 		
@@ -72,161 +72,175 @@ public class Scene extends haxe.lang.HxObject
 	
 	public void Add(ln.Shape shape)
 	{
-		//line 24 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 24 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Scene s = this;
-		//line 25 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 25 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		s.Shapes = s.Shapes.concat(new haxe.root.Array<ln.Shape>(new ln.Shape[]{shape}));
 	}
 	
 	
 	public ln.Hit Intersect(ln.Ray r)
 	{
-		//line 28 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 28 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Scene s = this;
-		//line 29 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 29 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		return s.Tree.Intersect(r);
 	}
 	
 	
 	public boolean Visible(ln.Vector eye, ln.Vector point)
 	{
-		//line 32 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 32 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Scene s = this;
-		//line 33 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 33 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Vector v = eye.Sub(point);
-		//line 34 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 34 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Ray r = new ln.Ray(point, v.Normalize());
-		//line 35 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 35 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Hit hit = s.Intersect(r);
-		//line 37 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 37 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		return ( hit.T >= v.Length() );
 	}
 	
 	
 	public haxe.root.Array<haxe.root.Array<ln.Vector>> Paths()
 	{
-		//line 40 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 40 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Scene s = this;
-		//line 41 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 41 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		haxe.root.Array<haxe.root.Array<ln.Vector>> result = ln._Paths.Paths_Impl_._new(new haxe.root.Array<haxe.root.Array<ln.Vector>>(new haxe.root.Array[]{}));
-		//line 42 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 42 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		haxe.root.Array<ln.Shape> _rddsn = s.Shapes;
-		//line 43 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		{
-			//line 43 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			int _g = 0;
-			//line 43 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			int _g1 = _rddsn.length;
-			//line 43 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			while (( _g < _g1 ))
 			{
-				//line 43 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 43 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				int _1 = _g++;
-				//line 44 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 45 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				ln.Shape shape = _rddsn.__get(_1);
-				//line 45 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 46 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				result = ln._Paths.Paths_Impl_.concat(result, shape.Paths());
 			}
 			
 		}
 		
-		//line 47 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 48 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		return result;
 	}
 	
 	
 	public haxe.root.Array<haxe.root.Array<ln.Vector>> Render(ln.Vector eye, ln.Vector center, ln.Vector up, double width, double height, double fovy, double near, double far, double step)
 	{
-		//line 50 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 51 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Scene s = this;
-		//line 51 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 52 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		double aspect = ( width / height );
-		//line 52 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 53 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Matrix matrix = ln.Ln.LookAt(eye, center, up);
-		//line 53 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 54 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		matrix = matrix.Perspective(fovy, aspect, near, far);
-		//line 54 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 55 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		return s.RenderWithMatrix(matrix, eye, width, height, step);
 	}
 	
 	
 	public haxe.root.Array<haxe.root.Array<ln.Vector>> RenderWithMatrix(ln.Matrix matrix, ln.Vector eye, double width, double height, double step)
 	{
-		//line 57 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 58 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		ln.Scene s = this;
-		//line 58 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 59 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, "render step 0/6", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Scene", "ln/Scene.hx", "RenderWithMatrix"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (59) )) )}));
+		//line 60 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		s.Compile();
-		//line 59 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 61 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, "render step 1/6", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Scene", "ln/Scene.hx", "RenderWithMatrix"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (61) )) )}));
+		//line 62 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		haxe.root.Array<haxe.root.Array<ln.Vector>> paths = s.Paths();
-		//line 60 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 63 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, "render step 2/6", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Scene", "ln/Scene.hx", "RenderWithMatrix"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (63) )) )}));
+		//line 64 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		if (( step > 0 )) 
 		{
-			//line 61 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 65 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			paths = ln._Paths.Paths_Impl_.Chop(paths, step);
 		}
 		
-		//line 63 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 67 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, "render step 3/6", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Scene", "ln/Scene.hx", "RenderWithMatrix"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (67) )) )}));
+		//line 68 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		paths = ln._Paths.Paths_Impl_.Filter(paths, new ln.ClipFilter(matrix, eye, s));
-		//line 64 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 69 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, "render step 4/6", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Scene", "ln/Scene.hx", "RenderWithMatrix"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (69) )) )}));
+		//line 70 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		if (( step > 0 )) 
 		{
-			//line 65 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 71 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			paths = ln._Paths.Paths_Impl_.Simplify(paths, 1e-6);
 		}
 		
-		//line 68 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 73 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, "render step 5/6", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Scene", "ln/Scene.hx", "RenderWithMatrix"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (73) )) )}));
+		//line 74 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		matrix = ln.Ln.Translate(new ln.Vector(1, 1, 0)).Scale(new ln.Vector(( width / 2 ), ( height / 2 ), 0));
-		//line 69 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 75 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		paths = ln._Paths.Paths_Impl_.Transform(paths, matrix);
-		//line 70 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 76 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, "render step 6/6", 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"ln.Scene", "ln/Scene.hx", "RenderWithMatrix"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (76) )) )}));
+		//line 77 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		return paths;
 	}
 	
 	
 	@Override public java.lang.Object __hx_setField(java.lang.String field, java.lang.Object value, boolean handleProperties)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				switch (field.hashCode())
 				{
 					case 2615230:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Tree")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							this.Tree = ((ln.Tree) (value) );
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return value;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case -1819700974:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Shapes")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							this.Shapes = ((haxe.root.Array<ln.Shape>) (value) );
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return value;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
@@ -235,15 +249,15 @@ public class Scene extends haxe.lang.HxObject
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				return super.__hx_setField(field, value, handleProperties);
 			}
 			else
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				throw null;
 			}
 			
@@ -254,156 +268,156 @@ public class Scene extends haxe.lang.HxObject
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				switch (field.hashCode())
 				{
 					case 826074749:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("RenderWithMatrix")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "RenderWithMatrix")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case -1819700974:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Shapes")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return this.Shapes;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case -1850724938:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Render")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Render")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case 2615230:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Tree")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return this.Tree;
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case 76886222:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Paths")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Compile")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case 2131396690:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Visible")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Visible")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case 65665:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Add")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Add")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "Intersect")) );
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
@@ -412,15 +426,15 @@ public class Scene extends haxe.lang.HxObject
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				throw null;
 			}
 			
@@ -431,124 +445,124 @@ public class Scene extends haxe.lang.HxObject
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, java.lang.Object[] dynargs)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		{
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			if (( field != null )) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				switch (field.hashCode())
 				{
 					case 826074749:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("RenderWithMatrix")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return this.RenderWithMatrix(((ln.Matrix) (dynargs[0]) ), ((ln.Vector) (dynargs[1]) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[2])) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[3])) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[4])) ));
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case -1679822317:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Compile")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							this.Compile();
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case -1850724938:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Render")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return this.Render(((ln.Vector) (dynargs[0]) ), ((ln.Vector) (dynargs[1]) ), ((ln.Vector) (dynargs[2]) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[3])) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[4])) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[5])) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[6])) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[7])) ), ((double) (haxe.lang.Runtime.toDouble(dynargs[8])) ));
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case 65665:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Add")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							this.Add(((ln.Shape) (dynargs[0]) ));
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case 76886222:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Paths")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return this.Paths();
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case -1787984641:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Intersect")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return this.Intersect(((ln.Ray) (dynargs[0]) ));
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
 					
 					case 2131396690:
 					{
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						if (field.equals("Visible")) 
 						{
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							__temp_executeDef1 = false;
-							//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+							//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 							return this.Visible(((ln.Vector) (dynargs[0]) ), ((ln.Vector) (dynargs[1]) ));
 						}
 						
-						//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+						//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 						break;
 					}
 					
@@ -557,27 +571,27 @@ public class Scene extends haxe.lang.HxObject
 				
 			}
 			
-			//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+			//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+				//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		return null;
 	}
 	
 	
 	@Override public void __hx_getFields(haxe.root.Array<java.lang.String> baseArr)
 	{
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		baseArr.push("Tree");
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		baseArr.push("Shapes");
-		//line 6 "/Users/lingdonghuang/proj/go2json/ln/Scene.hx"
+		//line 6 "/Users/lingdonghuang/proj/LN.pde/ln/Scene.hx"
 		super.__hx_getFields(baseArr);
 	}
 	
